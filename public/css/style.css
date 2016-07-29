@@ -1,0 +1,105 @@
+* {
+	font-family :'Montserrat', sans-serif;
+}
+
+.inner_container {
+	margin-top: 60px;
+	position: relative;
+}
+
+h1 { 
+	color: #0099CC;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+.task_container {
+	width: 90%;
+	margin: auto auto;
+}
+
+.dummy {
+	margin-top:100%;
+}
+.thumbnail {
+	position: absolute;
+	top: 15px;
+	bottom: 0;
+	left:15px;
+	right: 0;
+	text-align: center;
+	padding-top: 35%;
+}
+
+#name {
+	width: 90%;
+	color: #0099CC;
+}
+
+.update:hover {
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+.options {
+	position: absolute;
+}
+
+input {
+	border: 0;
+	color: #0099CC;
+}
+input:required {
+	box-shadow:none;
+}
+input:focus {
+	outline-width: 0;
+}
+
+input {
+	border: 0;
+	color: #0099CC;
+}
+input:required {
+	box-shadow:none;
+}
+input.form-control[type="text"] {
+	box-shadow:none;
+	border: white;
+}
+input.form-control[type="text"]:focus {
+	box-shadow:none;
+	border: white;
+}
+
+#clear:hover, #submit:hover {
+	cursor: pointer;
+}
+
+.panel-body {
+	font-size: 20px;
+}
+
+.create {
+	height: 40px;
+	width: 60px;
+	background-color: yellow;
+	text-align: center;
+	vertical-align: middle;
+}
+.create:hover {
+	background-color: lightblue;
+	transition: 0.2s;	
+}
+
+.go-back {
+	font-size: 30px;
+	color: #0099CC;
+}

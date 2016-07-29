@@ -1,0 +1,29 @@
+{
+  "name": "anydo",
+  "version": "1.0.0",
+  "description": "My first nodejs app",
+  "main": "anydo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git:https://github.com/barryhe/todo.git"
+  },
+  "keywords": [
+    "Todo"
+  ],
+  "author": "Barry",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "express-myconnection": "^1.0.4",
+    "body-parser": "^1.15.2",
+    "morgan": "^1.7.0",
+    "node-mysql": "^0.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}

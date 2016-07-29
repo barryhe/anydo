@@ -1,0 +1,45 @@
+<%- include layouts/header.ejs %>
+	<div class="go-back">
+		<a href="/"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go back</a>
+	</div>
+	<div class="row" style="margin-top:20px">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="task_container">
+					<form id="myform" method="post" action="/tasks/save">
+						<input type="text" name="table" value="<%= buffer %>" style="display:none" required>
+						<input class="form-control" id="key" type="text" name="task" autocomplete="off" autofocus required>
+					</form>
+				</div>
+			</div>
+		</div>
+		<% if(data.length){ %>
+			<%for (var i=0; i<data.length; i++){ %>
+				<div class="panel panel-default" id=<%=data[i].id%>>
+					<div class="panel-body">			
+						<!-- <div class="col-md-11 col-xs-11 col-sm-11"> -->
+						<div class="task_container">
+							<div style="float: left">
+								<%=data[i].items%>
+							</div>
+							<div style="float:right">
+								<a class="a-inside delete" href="/tasks/delete/<%=data[i].id%>"><i class="fa fa-check" aria-hidden="true"></i></a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+	
+			<% } }%>
+	</div>
+	<script>
+		$('#key').keypress(function(e){
+			if (e.which===13){
+				e.preventDefault();
+				$('#myform').submit();
+			}
+		});
+	</script>
+
+
+<%- include layouts/footer.ejs %>

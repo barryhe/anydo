@@ -1,0 +1,72 @@
+<%- include layouts/header.ejs %>
+	
+	<div class="row" id="panels">
+			<div class="col-md-3 col-xs-4 col-sm-6">
+				<div class="dummy">
+					<div class="thumbnail">
+						<form id="tableform" method="post" action="/tables/save">
+							<input id="name" type="text" name="table" autofocus autocomplete="off" required>
+						</form>
+					</div>
+					<a id="submit"><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a id="clear"><i class="fa fa-times" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		<% if(data.length){ %>
+			<%for (var i=0; i<data.length; i++){ %>
+		
+				<div class="col-md-3 col-xs-4 col-sm-6" >
+					<div class="dummy">				
+						<a href="/todos/<%=data[i].names%>" class="thumbnail">
+							<span><%=data[i].names%></span>
+						</a>
+						<a class="delete" href="/tables/delete/<%=data[i].id%>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+						<a class='update' data-toggle="modal" data-target=<%= "#my"+data[i].names %> ><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+						<div id=<%= "my"+data[i].names %> class="modal fade" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Edit <%= data[i].names %></h4>
+
+									</div>
+									<div class="modal-body">
+										<form id="save_it" method="post" action="/tables/update/<%=data[i].id%>">
+											<input id="update" class="form-control" type="text" name="save_edit" value="<%=data[i].names%>" autocomplete="off" required>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal" onclick="$('#save_it').submit()">Submit</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+	
+			<% } %>
+		<%  } %>
+	</div>
+	<div><div></div></div>
+	
+	<!--<script src="/js/ajax.js" type="text/javascript"></script>-->
+	<script>
+		$('#clear').click(function(){
+			$('#name').val('');
+		});
+		$('#submit').click(function(){
+			$('#tableform').submit();
+		});
+
+		$('.delete').click(function(){
+			return confirm("Are you sure?");
+		});
+
+
+		
+	</script>
+
+<%- include layouts/footer.ejs %>
