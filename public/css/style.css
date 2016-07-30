@@ -39,7 +39,6 @@ h1 {
 .update:hover {
 	cursor: pointer;
 }
-
 a:hover {
 	text-decoration: none;
 }
@@ -90,4 +89,7 @@ input.form-control[type="text"]:focus {
 .go-back {
 	font-size: 30px;
 	color: #0099CC;
+}
+.footer {
+	margin-top: 40px;
 }

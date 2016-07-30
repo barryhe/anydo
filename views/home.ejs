@@ -7,10 +7,10 @@
 						<form id="tableform" method="post" action="/tables/save">
 							<input id="name" type="text" name="table" autofocus autocomplete="off" required>
 						</form>
-					</div>
-					<a id="submit"><i class="fa fa-check" aria-hidden="true"></i></a>
-					<a id="clear"><i class="fa fa-times" aria-hidden="true"></i></a>
+					</div>	
 				</div>
+				<a id="submit"><i class="fa fa-check" aria-hidden="true"></i></a>
+				<a id="clear"><i class="fa fa-times" aria-hidden="true"></i></a>
 			</div>
 		<% if(data.length){ %>
 			<%for (var i=0; i<data.length; i++){ %>
@@ -20,7 +20,7 @@
 						<a href="/todos/<%=data[i].names%>" class="thumbnail">
 							<span><%=data[i].names%></span>
 						</a>
-						<a class="delete" href="/tables/delete/<%=data[i].id%>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+						<a class="delete"  href="/tables/delete/<%=data[i].id%>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 						<a class='update' data-toggle="modal" data-target=<%= "#my"+data[i].names %> ><i class="fa fa-pencil" aria-hidden="true"></i></a>
 
 						<div id=<%= "my"+data[i].names %> class="modal fade" role="dialog">
