@@ -1,7 +1,7 @@
 <%- include layouts/header.ejs %>
 	
 	<div class="row" id="panels">
-			<div class="col-md-3 col-xs-4 col-sm-6">
+			<div class="col-md-4 col-xs-12 col-sm-6">
 				<div class="dummy">
 					<div class="thumbnail">
 						<form id="tableform" method="post" action="/tables/save">
@@ -15,7 +15,7 @@
 		<% if(data.length){ %>
 			<%for (var i=0; i<data.length; i++){ %>
 		
-				<div class="col-md-3 col-xs-4 col-sm-6" >
+				<div class="col-md-4 col-xs-12 col-sm-6" >
 					<div class="dummy">				
 						<a href="/todos/<%=data[i].names%>" class="thumbnail">
 							<span><%=data[i].names%></span>
