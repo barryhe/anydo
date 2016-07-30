@@ -31,6 +31,10 @@ h1 {
 	padding-top: 35%;
 }
 
+.clickable {
+	cursor: pointer;
+}
+
 #name {
 	width: 90%;
 	color: #0099CC;

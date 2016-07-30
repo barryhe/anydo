@@ -21,7 +21,7 @@
 							<span><%=data[i].names%></span>
 						</a>
 						<a class="delete"  href="/tables/delete/<%=data[i].id%>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-						<a class='update' data-toggle="modal" data-target=<%= "#my"+data[i].names %> ><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<a class='update clickable' data-toggle="modal" data-target=<%= "#my"+data[i].names %> ><i class="fa fa-pencil" aria-hidden="true"></i></a>
 
 						<div id=<%= "my"+data[i].names %> class="modal fade" role="dialog">
 							<div class="modal-dialog">
