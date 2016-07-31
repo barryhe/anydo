@@ -29,7 +29,7 @@ app.use(
 	connection(mysql, {
 		host:'localhost',
 		user:'root',
-		password:'Shanghai1!',
+		password:'',
 		path:'3306',
 		database:'anydo',
 	}, 'pool')
