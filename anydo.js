@@ -3,10 +3,9 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var bodyparser = require('body-parser');
+var morgan       = require('morgan');
+app.use(morgan('dev')); // log every request to the console
 
-//new environment setup in express 4
-	//var logger=require("morgan");
-	//app.use(logger('combined'));
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: 'yes'}));
 //methodOverride
